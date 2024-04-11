@@ -15,9 +15,7 @@ function MyApp(): JSX.Element {
 
 
     <View style={styles.container}>
-      <Text >Hello World !!</Text>
-      {/* <Text>Hello World !!</Text>
-      <Text>Hello World !!</Text> */}
+      <Text style={ isDarkMode? styles.whiteText : styles.darkText}>Complete the basic setup</Text>
     </View>
 
   )
@@ -25,18 +23,23 @@ function MyApp(): JSX.Element {
 
 }
 
-const styles = StyleSheet.create(
+const styles = StyleSheet.create({
 
+  container: {
 
-  {
+    flex: 1,
+    alignItems: 'flex-end',
+    justifyContent : 'center'
+  },
+  whiteText: {
 
-    container: {
+    color: '#FFFFFF',
+  },
+  darkText: {
 
-      flex: 1,
-      alignItems: 'flex-end'
-    }
-
+    color: '#000000',
   }
+}
 )
 
 
